@@ -1,9 +1,7 @@
 package ouammou.tp2.service;
 
-import me.enset.hospital.entities.Consultation;
-import me.enset.hospital.entities.Medecin;
-import me.enset.hospital.entities.Patient;
-import me.enset.hospital.entities.RendezVous;
+
+import ouammou.tp2.entities.*;
 
 public interface IHospitalService {
     Patient savePatient(Patient patient);

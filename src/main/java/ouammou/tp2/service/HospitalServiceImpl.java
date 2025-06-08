@@ -1,21 +1,18 @@
 package ouammou.tp2.service;
 
-import me.enset.hospital.entities.Consultation;
-import me.enset.hospital.entities.Medecin;
-import me.enset.hospital.entities.Patient;
-import me.enset.hospital.entities.RendezVous;
-import me.enset.hospital.repositories.ConsultationRepository;
-import me.enset.hospital.repositories.MedecinRepository;
-import me.enset.hospital.repositories.PatientRepository;
-import me.enset.hospital.repositories.RendezVousRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import ouammou.tp2.entities.Consultation;
+import ouammou.tp2.entities.Medecin;
+import ouammou.tp2.entities.Patient;
+import ouammou.tp2.entities.RendezVous;
+import ouammou.tp2.repositories.*;
 
-import javax.transaction.Transactional;
 import java.util.UUID;
 
 @Service
 @Transactional
-public class HospitalServiceImpl implements IHospitalService {
+public abstract class HospitalServiceImpl implements IHospitalService {
    private PatientRepository patientRepository;
    private MedecinRepository medecinRepository;
    private RendezVousRepository rendezVousRepository;

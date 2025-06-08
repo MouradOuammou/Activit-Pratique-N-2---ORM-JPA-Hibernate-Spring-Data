@@ -1,10 +1,11 @@
 package ouammou.tp2.web;
 
-import me.enset.hospital.entities.Patient;
-import me.enset.hospital.repositories.PatientRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ouammou.tp2.entities.Patient;
+import ouammou.tp2.repositories.PatientRepository;
 
 import java.util.List;
 
