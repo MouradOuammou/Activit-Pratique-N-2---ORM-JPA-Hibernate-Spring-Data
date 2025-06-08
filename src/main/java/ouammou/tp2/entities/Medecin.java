@@ -1,11 +1,11 @@
 package ouammou.tp2.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.util.Collection;
 
 
@@ -14,7 +14,8 @@ import java.util.Collection;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Medecin {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
     private String email;

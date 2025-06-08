@@ -1,11 +1,11 @@
 package ouammou.tp2.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.util.Date;
 
 
@@ -14,7 +14,8 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Consultation {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date dateConsultation;
     private String rapportConsultation;
